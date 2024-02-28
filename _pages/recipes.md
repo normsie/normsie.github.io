@@ -1,75 +1,190 @@
 ---
-layout: distill
-title: a distill-style blog post
-description: an example of a distill-style blog post and main elements
-tags: distill formatting
-#giscus_comments: true
-date: 2024-02-28
-featured: true
-
-# Optionally, you can add a table of contents to your post.
-# NOTES:
-#   - make sure that TOC names match the actual section names
-#     for hyperlinks within the post to work correctly.
-#   - we may want to automate TOC generation in the future using
-#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
-toc:
-  - name: Introduction - Tiramisu and Why Recipe Writers can't stop ranting. 
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
-  - name: Recipe
-    subsections:
-        - name: Ingredients
-        - name: Instruction
-
-
-# Below is an example of injecting additional post-specific styles.
-# If you use this post as a template, delete this _styles block.
-_styles: >
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }
+layout: default
+permalink: /recipe/
+title: recipe
+nav: true
+nav_order: 1
+pagination:
+  enabled: true
+  collection: recipe
+  permalink: /page/:num/
+  per_page: 5
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 1 # The number of links before the current page
+    after: 3 # The number of links after the current page
 ---
 
-### Introduction - Tiramisu and Why Recipe Writers can't stop ranting. 
+<div class="post">
 
-This incredibly simple Tiramisu recipe takes only less than 30 minutes to prepare (and a few hours to chill). Even though it is not as authentic, this recipe still surely satisfies your sweet tooth and crave for this famous Italian treat. With only 6 ingredients and no baking required, this is a fool-proof dessert that guarantees success everytime. So even with no prior experience, do not hesistate to treat yourself or your loved ones with some sugar and cocoa!
+{% assign blog_name_size = site.blog_name | size %}
+{% assign blog_description_size = site.blog_description | size %}
 
-One thing I hate about online recipe is the lengthy, beat-around-the-bush writing style. The writers would go on and on about a story that barely relates to the recipe. Turns out, they have to! Apparently, most cooking recipes are pretty similar, and one method is usually insprired by others, with some personal touches of the writers. So, in order to avoid potential plagiarism, recipe writers usually add many other details, so the cooking is just a part of the whole article. 
+{% if blog_name_size > 0 or blog_description_size > 0 %}
 
-Unfortunately, this is also the protocol that I have to follow, at least if I want to keep this blog up and running for a while :). But I figure, instead of going rouge about how this cake changes my life or other nonsense, I can share some fun fact about food science I learn here and there, for example cacao is the bean, cacao powder is made from unroasted, fermented cacao beans at low temperatetures, and cocoa powder is processed at much higher temperateture and often contains added sugar and dairy powder. For that reason, cacao powder is vegan while most cocoa powder is not. Pretty interesting, right? At least for me. If you enjoy these little fun facts, I will blend them into my recipe blogs. But if that is not your cup of tea, worry not, and jump right into the Recipe section using the shortcut in Table of Content. 
+  <div class="header-bar">
+    <h1>{{ site.blog_name }}</h1>
+    <h2>{{ site.blog_description }}</h2>
+  </div>
+  {% endif %}
 
-### Recipe
+{% if site.display_tags or site.display_categories %}
 
-#### Ingredients:
+  <div class="tag-category-list">
+    <ul class="p-0 m-0">
+      {% for tag in site.display_tags %}
+        <li>
+          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/recipe/tag/' | relative_url }}">{{ tag }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %}
+      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
+        <p>&bull;</p>
+      {% endif %}
+      {% for category in site.display_categories %}
+        <li>
+          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/recipe/category/' | relative_url }}">{{ category }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
-As mentioned above, this recipe requires only 6 ingredients, all of which can be easily found at any market. Unfortunately, I haven't had any chances to manoeuvre a vegan/vegeterian version of this. But hopefully in the future, I can find substitutes for them.
+{% assign featured_posts = site.posts | where: "featured", "true" %}
+{% if featured_posts.size > 0 %}
+<br>
 
-For 6-8 servings:
+<div class="container featured-posts">
+{% assign is_even = featured_posts.size | modulo: 2 %}
+<div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
+{% for post in featured_posts %}
+<div class="card-item col">
+<a href="{{ post.url | relative_url }}">
+<div class="card hoverable">
+<div class="row g-0">
+<div class="col-md-12">
+<div class="card-body">
+<div class="float-right">
+<i class="fa-solid fa-thumbtack fa-xs"></i>
+</div>
+<h3 class="card-title text-lowercase">{{ post.title }}</h3>
+<p class="card-text">{{ post.description }}</p>
 
-- 500 grams mascarpone, room temperature
+                    {% if post.external_source == blank %}
+                      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+                    {% else %}
+                      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+                    {% endif %}
+                    {% assign year = post.date | date: "%Y" %}
 
-- 200 grams heavy whipping cream (30+%)
+                    <p class="post-meta">
+                      {{ read_time }} min read &nbsp; &middot; &nbsp;
+                      <a href="{{ year | prepend: '/recipe/' | prepend: site.baseurl}}">
+                        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    <hr>
 
-- 4 Tablespoons instant coffee
+{% endif %}
 
-- 150 grams granulated sugar
+  <ul class="post-list">
 
-- 200 grams Lady Fingers
+    {% if page.pagination.enabled %}
+      {% assign postlist = paginator.posts %}
+    {% else %}
+      {% assign postlist = site.posts %}
+    {% endif %}
 
-- Cocoa/cacao powder
+    {% for post in postlist %}
 
-#### Instruction:
+    {% if post.external_source == blank %}
+      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+    {% else %}
+      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+    {% endif %}
+    {% assign year = post.date | date: "%Y" %}
+    {% assign tags = post.tags | join: "" %}
+    {% assign categories = post.categories | join: "" %}
+
+    <li>
+
+{% if post.thumbnail %}
+
+<div class="row">
+          <div class="col-sm-9">
+{% endif %}
+        <h3>
+        {% if post.redirect == blank %}
+          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% elsif post.redirect contains '://' %}
+          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
+          <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        {% else %}
+          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+        {% endif %}
+      </h3>
+      <p>{{ post.description }}</p>
+      <p class="post-meta">
+        {{ read_time }} min read &nbsp; &middot; &nbsp;
+        {{ post.date | date: '%B %d, %Y' }}
+        {% if post.external_source %}
+        &nbsp; &middot; &nbsp; {{ post.external_source }}
+        {% endif %}
+      </p>
+      <p class="post-tags">
+        <a href="{{ year | prepend: '/recipe/' | prepend: site.baseurl}}">
+          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+
+          {% if tags != "" %}
+          &nbsp; &middot; &nbsp;
+            {% for tag in post.tags %}
+            <a href="{{ tag | slugify | prepend: '/recipe/tag/' | prepend: site.baseurl}}">
+              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
+              {% endfor %}
+          {% endif %}
+
+          {% if categories != "" %}
+          &nbsp; &middot; &nbsp;
+            {% for category in post.categories %}
+            <a href="{{ category | slugify | prepend: '/recipe/category/' | prepend: site.baseurl}}">
+              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
+              {% endfor %}
+          {% endif %}
+    </p>
+
+{% if post.thumbnail %}
+
+</div>
+
+  <div class="col-sm-3">
+    <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
+  </div>
+</div>
+{% endif %}
+    </li>
+
+    {% endfor %}
+
+  </ul>
+
+{% if page.pagination.enabled %}
+{% include pagination.liquid %}
+{% endif %}
+
+</div>
