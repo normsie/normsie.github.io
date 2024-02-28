@@ -127,9 +127,9 @@ blog_name: al-folio # blog_name will be displayed in your blog page
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
-# recipe_name: Long's kitchen # blog_name will be displayed in your blog page
-# recipe_description: My food journey 
-# permalink: /recipe/:year/:title/
+recipe_name: Long's kitchen # blog_name will be displayed in your blog page
+recipe_description: My food journey 
+permalink: /recipe/:year/:title/
 
 # Pagination
 pagination:
