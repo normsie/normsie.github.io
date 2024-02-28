@@ -16,7 +16,7 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="post">
+<div class="recipe">
 
 {% assign recipe_name_size = site.recipe_name | size %}
 {% assign recipe_description_size = site.recipe_description | size %}
