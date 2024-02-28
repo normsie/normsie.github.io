@@ -4,7 +4,7 @@ title: a distill-style blog post
 description: an example of a distill-style blog post and main elements
 tags: distill formatting
 #giscus_comments: true
-date: 2024-02-28
+date: 2024-02-28 11:12
 featured: true
 
 # Optionally, you can add a table of contents to your post.
