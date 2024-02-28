@@ -21,11 +21,11 @@ pagination:
 {% assign recipe_name_size = site.recipe_name | size %}
 {% assign recipe_description_size = site.recipe_description | size %}
 
-{% if blog_name_size > 0 or recipe_description_size > 0 %}
+{% if recipe_name_size > 0 or recipe_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
+    <h1>{{ site.recipe_name }}</h1>
+    <h2>{{ site.recipe_description }}</h2>
   </div>
   {% endif %}
 
