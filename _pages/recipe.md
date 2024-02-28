@@ -7,7 +7,7 @@ nav_order: 3
 pagination:
   enabled: true
   collection: recipe
-  permalink: /recipe/:year/:title/
+  recipe_permalink: /recipe/:year/:title/
   per_page: 5
   sort_field: date
   sort_reverse: true
