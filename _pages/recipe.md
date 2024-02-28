@@ -18,10 +18,10 @@ pagination:
 
 <div class="post">
 
-{% assign blog_name_size = site.blog_name | size %}
-{% assign blog_description_size = site.blog_description | size %}
+{% assign recipe_name_size = site.recipe_name | size %}
+{% assign recipe_description_size = site.recipe_description | size %}
 
-{% if blog_name_size > 0 or blog_description_size > 0 %}
+{% if blog_name_size > 0 or recipe_description_size > 0 %}
 
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
