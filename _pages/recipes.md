@@ -5,6 +5,8 @@ title: recipes
 nav: true
 nav_order: 3
 description: Recipes that I like to make 
+categories: sample-posts
+giscus_comments: true
 toc: 
   beginning: true
 pagination:
@@ -18,6 +20,7 @@ pagination:
     before: 1 # The number of links before the current page
     after: 3 # The number of links after the current page
 ---
+
 ### Introduction - Tiramisu and Why Recipe Writers can't stop ranting. 
 
 This incredibly simple Tiramisu recipe takes only less than 30 minutes to prepare (and a few hours to chill). Even though it is not as authentic, this recipe still surely satisfies your sweet tooth and crave for this famous Italian treat. With only 6 ingredients and no baking required, this is a fool-proof dessert that guarantees success everytime. So even with no prior experience, do not hesistate to treat yourself or your loved ones with some sugar and cocoa!
