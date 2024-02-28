@@ -56,7 +56,7 @@ pagination:
   </div>
   {% endif %}
 
-{% assign featured_posts = site.posts | where: "featured", "true" %}
+{% assign featured_posts = site.recipe | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
 <br>
 
@@ -104,9 +104,9 @@ pagination:
   <ul class="post-list">
 
     {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
+      {% assign postlist = paginator.recipe %}
     {% else %}
-      {% assign postlist = site.posts %}
+      {% assign postlist = site.recipe %}
     {% endif %}
 
     {% for post in postlist %}
