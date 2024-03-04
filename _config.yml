@@ -133,7 +133,7 @@ permalink: /blog/:year/:title/
 
 recipe_name: Long's kitchen 
 recipe_description: My food journey 
-
+permalink_: /recipe/:year/:title/
 
 # Pagination
 pagination:
