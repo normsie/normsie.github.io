@@ -3,11 +3,11 @@ layout: default
 permalink: /recipe/
 title: recipe
 nav: true
-nav_order: 3
+nav_order: 1
 pagination:
   enabled: true
-  collection: recipe
-  permalink_: /recipe/:year/:title/
+  collection: posts
+  permalink: /page/:num/
   per_page: 5
   sort_field: date
   sort_reverse: true
@@ -16,7 +16,7 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="recipe">
+<div class="post">
 
 {% assign recipe_name_size = site.recipe_name | size %}
 {% assign recipe_description_size = site.recipe_description | size %}
@@ -29,7 +29,7 @@ pagination:
   </div>
   {% endif %}
 
-<!-- {% if site.display_tags or site.display_categories %}
+{% if site.display_tags or site.display_categories %}
 
   <div class="tag-category-list">
     <ul class="p-0 m-0">
@@ -54,9 +54,9 @@ pagination:
       {% endfor %}
     </ul>
   </div>
-  {% endif %} -->
+  {% endif %}
 
-<!-- {% assign featured_posts = site.recipe | where: "featured", "true" %}
+{% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
 <br>
 
@@ -99,14 +99,14 @@ pagination:
     </div>
     <hr>
 
-{% endif %} -->
+{% endif %}
 
   <ul class="post-list">
 
     {% if page.pagination.enabled %}
-      {% assign postlist = paginator.recipe %}
+      {% assign postlist = paginator.posts %}
     {% else %}
-      {% assign postlist = site.recipe %}
+      {% assign postlist = site.posts %}
     {% endif %}
 
     {% for post in postlist %}
