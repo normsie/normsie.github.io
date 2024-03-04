@@ -123,8 +123,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: Nothing works
+blog_name: Long's corner # blog_name will be displayed in your blog page
+blog_description: Welcome
 permalink: /blog/:year/:title/
 
 # -----------------------------------------------------------------------------
