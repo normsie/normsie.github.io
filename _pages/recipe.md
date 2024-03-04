@@ -10,7 +10,7 @@ horizontal: false
 ---
 
 <!-- pages/recipe.md -->
-<div class="project">
+<div class="recipe">
 {% if site.enable_recipe_categories and page.display_categories %}
   <!-- Display categorized recipe -->
   {% for category in page.display_categories %}
