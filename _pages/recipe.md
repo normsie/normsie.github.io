@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: distill
 permalink: /recipe/
 title: recipe
 nav: true
