@@ -15,63 +15,15 @@ This is an example post with advanced image components.
 
 ## Image Slider
 
-$$
-\documentclass[border=0.125cm]{standalone}
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-\begin{document}
+This is a simple image slider. It uses the [Swiper](https://swiperjs.com/) library. Check the [examples page](https://swiperjs.com/demos) for more information of what you can achieve with it.
 
-\tikzset{%
-  every neuron/.style={
-    circle,
-    draw,
-    minimum size=1cm
-  },
-  neuron missing/.style={
-    draw=none, 
-    scale=4,
-    text height=0.333cm,
-    execute at begin node=\color{black}$\vdots$
-  },
-}
-
-\begin{tikzpicture}[x=1.5cm, y=1.5cm, >=stealth]
-
-\foreach \m/\l [count=\y] in {1,2,3,missing,4}
-  \node [every neuron/.try, neuron \m/.try] (input-\m) at (0,2.5-\y) {};
-
-\foreach \m [count=\y] in {1,missing,2}
-  \node [every neuron/.try, neuron \m/.try ] (hidden-\m) at (2,2-\y*1.25) {};
-
-\foreach \m [count=\y] in {1,missing,2}
-  \node [every neuron/.try, neuron \m/.try ] (output-\m) at (4,1.5-\y) {};
-
-\foreach \l [count=\i] in {1,2,3,n}
-  \draw [<-] (input-\i) -- ++(-1,0)
-    node [above, midway] {$I_\l$};
-
-\foreach \l [count=\i] in {1,n}
-  \node [above] at (hidden-\i.north) {$H_\l$};
-
-\foreach \l [count=\i] in {1,n}
-  \draw [->] (output-\i) -- ++(1,0)
-    node [above, midway] {$O_\l$};
-
-\foreach \i in {1,...,4}
-  \foreach \j in {1,...,2}
-    \draw [->] (input-\i) -- (hidden-\j);
-
-\foreach \i in {1,...,2}
-  \foreach \j in {1,...,2}
-    \draw [->] (hidden-\i) -- (output-\j);
-
-\foreach \l [count=\x from 0] in {Input, Hidden, Ouput}
-  \node [align=center, above] at (\x*2,2) {\l \\ layer};
-
-\end{tikzpicture}
-
-\end{document}
-$$
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/8.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/10.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/12.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>
 
 ## Image Comparison Slider
 
