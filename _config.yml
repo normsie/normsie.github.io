@@ -124,16 +124,12 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: why is this don't fucking work 
+blog_description: Nothing works
 permalink: /blog/:year/:title/
 
 # -----------------------------------------------------------------------------
 # Recipe
 # -----------------------------------------------------------------------------
-
-recipe_name: Long's kitchen 
-recipe_description: My food journey 
-permalink_: /recipe/:year/:title/
 
 # Pagination
 pagination:
