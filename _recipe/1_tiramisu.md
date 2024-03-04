@@ -1,11 +1,10 @@
 ---
-layout: page
+layout: distill
 title: Tiramisu
 description: Tiramisu recipe
-img:
+img: assets/img/12.jpg
 importance: 3
 category: dessert
-
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
