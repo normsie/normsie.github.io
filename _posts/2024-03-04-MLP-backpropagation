@@ -1,0 +1,101 @@
+---
+layout: distill
+title: Introduction to Deep Learning
+description: A series of notes aiding revising fundamental concepts 
+tags: deeplearning interview
+giscus_comments: true
+date: 2024-03-04
+featured: true
+
+authors:
+  - name: Albert Einstein
+    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+    affiliations:
+      name: IAS, Princeton
+  - name: Boris Podolsky
+    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
+    affiliations:
+      name: IAS, Princeton
+  - name: Nathan Rosen
+    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
+    affiliations:
+      name: IAS, Princeton
+
+bibliography: 2018-12-22-distill.bib
+
+# Optionally, you can add a table of contents to your post.
+# NOTES:
+#   - make sure that TOC names match the actual section names
+#     for hyperlinks within the post to work correctly.
+#   - we may want to automate TOC generation in the future using
+#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
+toc:
+  - name: Deep Learning - what is it?
+    # if a section has subsections, you can add them as follows:
+    # subsections:
+    #   - name: Example Child Subsection 1
+    #   - name: Example Child Subsection 2
+  - name: Linear Classifier
+  - name: Multi-Layer Perceptron
+  - name: Backpropagation
+
+
+# Below is an example of injecting additional post-specific styles.
+# If you use this post as a template, delete this _styles block.
+_styles: >
+  .fake-img {
+    background: #bbb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+  }
+  .fake-img p {
+    font-family: monospace;
+    color: white;
+    text-align: left;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+---
+
+This is the first in a series of blog notes dedicating to summarizing the most fundamental concepts in Machine Learning, Deep Learning, AI, and other scientific topics of my interest. Struggling to comprehend, distinguish, and reminisce these  concepts myself sometimes, especially before and during important interviews, I would treasure a lot a source of simple, concise, accurate information to revise for those occasions. With that in mind, I created this blog series including fundamental AI/ML concepts and relating interview questions for those preparing to launch their career in the field, or for those who simply need a refresh before moving on to more complicated concepts. If you fancy to dig deeper into these topics, you can refer to my [colleague's blog](https://ottovintola.github.io/blog/) for a more comprehensive and thorough series. 
+
+In this first blog, we will go through the concept of Deep Learning, Linear Classifier, Multi-Layer Perception (MLP) and Backpropagation 
+
+
+## Deep Learning - what is it?
+
+Deep Learning (DL) is the subset of ML that focuses on the studies of Artificial Neural Networks (ANNs) with feature learning. DL architectures take in large amount of data (structured/unstructured), and use complex algorithms that utilizes multiple layers (thus "deep") to progressively extract higher-level features and hidden patterns from the raw input. For example, lower layers identify edges and features that outline a dog within a picture, while higher ones identify the dog. 
+
+---
+
+## Linear Classifier
+
+$$
+\documentclass{standalone}
+
+\usepackage{neuralnetwork}
+
+\begin{document}
+    \begin{neuralnetwork}[height=4]
+        \newcommand{\x}[2]{$x_#2$}
+        \newcommand{\y}[2]{$\hat{y}_#2$}
+        \newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
+        \newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
+        \inputlayer[count=3, bias=true, title=Input\\layer, text=\x]
+        \hiddenlayer[count=4, bias=false, title=Hidden\\layer 1, text=\hfirst] \linklayers
+        \hiddenlayer[count=3, bias=false, title=Hidden\\layer 2, text=\hsecond] \linklayers
+        \outputlayer[count=2, title=Output\\layer, text=\y] \linklayers
+    \end{neuralnetwork}
+\end{document}
+$$
+
+---
+
+## Multi-Layer Perceptron
+
+
+---
+
+## Backpropagation
