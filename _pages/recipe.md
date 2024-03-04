@@ -17,7 +17,7 @@ horizontal: false
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_recipe = site.project | where: "category", category %}
+  {% assign categorized_recipe = site.recipe | where: "category", category %}
   {% assign sorted_recipe = categorized_recipe | sort: "importance" %}
   <!-- Generate cards for each recipe -->
   {% if page.horizontal %}
