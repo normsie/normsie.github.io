@@ -1,12 +1,12 @@
 ---
 layout: distill
 title: Introduction to Deep Learning
-description: A series of notes aiding revising fundamental concepts 
+description: A series of notes for revision purposes 
 tags: deeplearning interview
 #giscus_comments: true
 date: 2024-03-04 11:46:00
 categories: sample-posts
-thumbnail: assets/img/9.jpg
+thumbnail: assets/img/deepNN.jpeg
 featured: true
 publish: true
 
@@ -69,13 +69,15 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 ## Deep Learning - what is it?
 
-Deep Learning (DL) is the subset of ML that focuses on the studies of Artificial Neural Networks (ANNs) with feature learning. DL architectures take in large amount of data (structured/unstructured), and use complex algorithms that utilizes multiple layers (thus "deep") to progressively extract higher-level features and hidden patterns from the raw input. For example, lower layers identify edges and features that outline a dog within a picture, while higher ones identify the dog. 
+**Deep Learning (DL)** is the subset of ML that focuses on the studies of Artificial Neural Networks (ANNs) with feature learning. DL architectures take in large amount of data (structured/unstructured), and use complex algorithms that utilizes multiple layers (thus "deep") to progressively extract higher-level features and hidden patterns from the raw input. For example, lower layers might identify edges of an image while higher layers identify features that can easily be perceived by human, such as a dog, or a number. 
+
+**Feature learning** (supervised, unsupervised, self-supervised) or representation learning referes to the automatic extraction & selection of relevant features to discover useful representations or patterns *directly* from raw input. This replaces the manual feature engineering/designing process and allows automatic learning and using the features for specific tasks. 
 
 ---
 
 ## Linear Classifier
 
-nothing here
+**Linear Classifier** is the simplest ML models and thus it can be considered as elementary components for DL models, which is used for binary or multiclass classification tasks. It makes prediction by combining the input features with weights, and the decision boundary is a linear combination of these features. Therefore, its effectiveness depends on the linearity of the underlying patterns. 
 
 ---
 
