@@ -4,8 +4,7 @@ title: Introduction to Deep Learning
 description: A series of notes for revision purposes 
 tags: deeplearning interview
 giscus_comments: true
-date: 2024-03-04 10:10:00
-categories: sample-posts
+date: 2024-03-04
 thumbnail: assets/img/deepNN.jpeg
 featured: true
 
