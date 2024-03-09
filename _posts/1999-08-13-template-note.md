@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Template for lecture notes
-description: A series of notes for revision purposes 
+description: Template
 tags: deeplearning interview 
 #giscus_comments: true
 date: 1999-08-13 10:10:00
