@@ -5,7 +5,6 @@ description: A series of notes for revision purposes
 tags: deeplearning interview
 giscus_comments: true
 date: 2024-03-04
-thumbnail: assets/img/deepNN.jpeg
 featured: true
 
 # Optionally, you can add a table of contents to your post.
