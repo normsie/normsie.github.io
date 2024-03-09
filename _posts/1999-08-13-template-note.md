@@ -64,7 +64,6 @@ _styles: >
 
 Introduction 
 
-
 ## Section 1
 
 Place holder for content of Section 1

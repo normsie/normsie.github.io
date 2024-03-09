@@ -8,8 +8,6 @@ date: 2024-03-04
 categories: sample-posts
 thumbnail: assets/img/deepNN.jpeg
 featured: true
-publish: true
-
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
