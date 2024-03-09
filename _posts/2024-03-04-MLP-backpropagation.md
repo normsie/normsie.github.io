@@ -21,12 +21,12 @@ toc:
   - name: Deep Learning - what is it?
     # if a section has subsections, you can add them as follows:
     # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
+      # - name: Example Child Subsection 1
+      # - name: Example Child Subsection 2
   - name: Linear Classifier
   - name: Multi-Layer Perceptron
   - name: Backpropagation
-    - name: Interview questions
+      - name: Interview questions
 
 
 # Below is an example of injecting additional post-specific styles.
