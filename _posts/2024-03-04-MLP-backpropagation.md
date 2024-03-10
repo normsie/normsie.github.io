@@ -106,5 +106,3 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 5. Explain the concept of weight initialization in the context of backpropagation. 
 
   *Answer: Weight initialization is crucial as it influences the starting point of the optimization process. Poor initialization can lead to slow convergence or getting stuck in local minima. Common techniques include He initialization for ReLU and Xavier/Glorot initialization for Sigmoid or Tanh. These methods set the initial weights that balance the variance of inputs and outputs in each layer, promoting a stable and effective training process*
-
----
