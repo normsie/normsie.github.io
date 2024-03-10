@@ -1,11 +1,27 @@
 ---
 layout: distill
-title: Introduction to Deep Learning
-description: A series of notes for revision purposes 
-tags: deeplearning interview
+title: Testing
+description: laksdjf
+tags: distill formatting
 giscus_comments: true
-date: 2024-03-04
+date: 2024-03-03
 featured: true
+
+authors:
+  - name: Albert Einstein
+    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+    affiliations:
+      name: IAS, Princeton
+  - name: Boris Podolsky
+    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
+    affiliations:
+      name: IAS, Princeton
+  - name: Nathan Rosen
+    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
+    affiliations:
+      name: IAS, Princeton
+
+bibliography: 2018-12-22-distill.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -17,13 +33,12 @@ toc:
   - name: Deep Learning - what is it?
     # if a section has subsections, you can add them as follows:
     # subsections:
-      # - name: Example Child Subsection 1
-      # - name: Example Child Subsection 2
+    #   - name: Example Child Subsection 1
+    #   - name: Example Child Subsection 2
   - name: Linear Classifier
   - name: Multi-Layer Perceptron
   - name: Backpropagation
-      - name: Interview questions
-
+  - name: Interview questions
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -77,8 +92,9 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 - Backward pass: This pass involves the propagation of the error backward through the network to update the weights. The gradient of the loss function with respect to the weights is calculated using the chain rule of calculus. The weights are then adjusted in the opposite direction of the gradient to minimize the error, using done using optimization algorithm such as gradient descent. The updated weights improve the network's performance, and the process is repeated for multiple epochs until the model converges to a satisfactory solution. 
 
+---
 
-### Interview questions 
+## Interview questions 
 
 1. Explain the steps involved in the backpropagation algorithm and how it works in training a neural network:
 
