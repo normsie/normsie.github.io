@@ -38,6 +38,7 @@ toc:
   - name: Linear Classifier
   - name: Multi-Layer Perceptron
   - name: Backpropagation
+    subsections:
       - name: Interview questions
 
 # Below is an example of injecting additional post-specific styles.
