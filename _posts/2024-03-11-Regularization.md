@@ -4,7 +4,7 @@ title: Regularization
 description: A series of notes for revision purpose
 tags: deeplearning interview
 #giscus_comments: true
-date: 2024-03-11 11:46:00
+date: 2024-03-10 11:46:00
 thumbnail: assets/img/deepNN.jpeg
 
 
