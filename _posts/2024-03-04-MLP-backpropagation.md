@@ -1,11 +1,11 @@
 ---
 layout: distill
-title: Testing
-description: laksdjf
-tags: distill formatting
-giscus_comments: true
-date: 2024-03-03
-featured: true
+title: Introduction to Deep Learning 
+description: A series of notes for revision purpose
+tags: deeplearning interview
+#giscus_comments: true
+date: 2024-03-03 11:46:00
+thumbnail: assets/img/deepNN.jpeg
 
 authors:
   - name: Albert Einstein
@@ -95,7 +95,7 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 ---
 
-## Interview questions 
+### Interview questions 
 
 1. Explain the steps involved in the backpropagation algorithm and how it works in training a neural network:
 
@@ -104,7 +104,7 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 2. What is the role of the activation function in the backpropagation algorithm? Examples of commonly used activation functions and explain when to use them?
 
   *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*
-  
+
     *- Rectified Linear Unit (ReLU) for hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem*
 
     *- Sigmoid for inary classification output*
