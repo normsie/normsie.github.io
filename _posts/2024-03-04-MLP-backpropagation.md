@@ -93,8 +93,6 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 - Backward pass: This pass involves the propagation of the error backward through the network to update the weights. The gradient of the loss function with respect to the weights is calculated using the chain rule of calculus. The weights are then adjusted in the opposite direction of the gradient to minimize the error, using done using optimization algorithm such as gradient descent. The updated weights improve the network's performance, and the process is repeated for multiple epochs until the model converges to a satisfactory solution. 
 
----
-
 ### Interview questions 
 
   **Question: Explain the steps involved in the backpropagation algorithm and how it works in training a neural network:**
@@ -103,21 +101,23 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
   **Question: What is the role of the activation function in the backpropagation algorithm? Examples of commonly used activation functions and explain when to use them?**
 
-  *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*  
+  *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*
+  <i>  
   + Rectified Linear Unit (ReLU) for hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem  
   + Sigmoid for inary classification output  
   + Softmax for multi-class classification output to provide probability distribution over the classes  
+  </i>
 
-  1. How does the vanishing gradient problem affect the training of deep neural networks, and what strategies can be employed to mitigate this issue in the context of backpropagation?  
+  **Question: How does the vanishing gradient problem affect the training of deep neural networks, and what strategies can be employed to mitigate this issue in the context of backpropagation?**
 
   *Answer: Vanishing gradient problem occurs when gradients become extremely small during backpropagation as more layers using the same activation functions are added to the network, hindering the update of weights in earlier layers. This is because, by the chain rule, the derivatives of each layer are multiplied together (backward); thus the gradient decreases exponentially as we back-propagate to the initial layers. This is particularly problematic in deep NN.*
 
-  *To mitigate this, we could use weight initialization methods such as He for ReLU which doesn't cause a small derivative. Alternatively, we could use non-saturating activation functions, or implement skip connections (e.g. in Residual Networks). *
+  *To mitigate this, we could use weight initialization methods such as He for ReLU which doesn't cause a small derivative. Alternatively, we could use non-saturating activation functions, or implement skip connections (e.g. in Residual Networks).*
 
-  2. Impact of hyperparameters (learning rate, batch size, number of epochs) on the backpropagation algorithm?
+  **Question: Impact of hyperparameters (learning rate, batch size, number of epochs) on the backpropagation algorithm?**
 
   *Answer: Learning rate determines the step size during weight updates - too high rate might lead to overshooting while too low rate leads to slow convergence. Batch size affects the efficiency of weight updates - larger batches provide smoother convergence. The number of epochs influences the duration of training. Setting these hyperparameters involves trade-offs between dataset size, computational resources, and the need for regularization.*
 
-  5. Explain the concept of weight initialization in the context of backpropagation. 
+  **Question: Explain the concept of weight initialization in the context of backpropagation.** 
 
   *Answer: Weight initialization is crucial as it influences the starting point of the optimization process. Poor initialization can lead to slow convergence or getting stuck in local minima. Common techniques include He initialization for ReLU and Xavier/Glorot initialization for Sigmoid or Tanh. These methods set the initial weights that balance the variance of inputs and outputs in each layer, promoting a stable and effective training process*
