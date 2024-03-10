@@ -38,7 +38,7 @@ toc:
   - name: Linear Classifier
   - name: Multi-Layer Perceptron
   - name: Backpropagation
-  - name: Interview questions
+    - name: Interview questions
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -94,7 +94,7 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 ---
 
-## Interview questions 
+### Interview questions 
 
 1. Explain the steps involved in the backpropagation algorithm and how it works in training a neural network:
 
