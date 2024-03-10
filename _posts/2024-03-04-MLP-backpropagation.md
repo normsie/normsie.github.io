@@ -94,7 +94,7 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 ---
 
-### Interview questions 
+## Interview questions 
 
 1. Explain the steps involved in the backpropagation algorithm and how it works in training a neural network:
 
