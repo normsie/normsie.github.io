@@ -106,9 +106,9 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
   *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*  
   + Rectified Linear Unit (ReLU) for hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem  
   + Sigmoid for inary classification output  
-  + Softmax for multi-class classification output to provide probability distribution over the classes
+  + Softmax for multi-class classification output to provide probability distribution over the classes  
 
-  1. How does the vanishing gradient problem affect the training of deep neural networks, and what strategies can be employed to mitigate this issue in the context of backpropagation?
+  1. How does the vanishing gradient problem affect the training of deep neural networks, and what strategies can be employed to mitigate this issue in the context of backpropagation?  
 
   *Answer: Vanishing gradient problem occurs when gradients become extremely small during backpropagation as more layers using the same activation functions are added to the network, hindering the update of weights in earlier layers. This is because, by the chain rule, the derivatives of each layer are multiplied together (backward); thus the gradient decreases exponentially as we back-propagate to the initial layers. This is particularly problematic in deep NN.*
 
