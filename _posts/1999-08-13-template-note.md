@@ -35,7 +35,7 @@ bibliography: 2018-12-22-distill.bib
 toc:
   - name: Section 1
     # if a section has subsections, you can add them as follows:
-    # subsections:
+    subsections:
       - name: Subsection 1
       - name: Subsection 2
   - name: Section 2
