@@ -32,11 +32,14 @@ bibliography: 2018-12-22-distill.bib
 toc:
   - name: Deep Learning - what is it?
     # if a section has subsections, you can add them as follows:
-    # subsections:
-      # - name: Example Child Subsection 1
-      # - name: Example Child Subsection 2
+    subsections:
+      - name: Interview questions
   - name: Linear Classifier
+    subsections:
+      - name: Interview questions
   - name: Multi-Layer Perceptron
+    subsections:
+      - name: Interview questions
   - name: Backpropagation
     subsections:
       - name: Interview questions
@@ -70,6 +73,26 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 **Deep Learning (DL)** is the subset of ML that focuses on the studies of Artificial Neural Networks (ANNs) with feature learning. DL architectures take in large amount of data (structured/unstructured), and use complex algorithms that utilizes multiple layers (thus "deep") to progressively extract higher-level features and hidden patterns from the raw input. For example, lower layers might identify edges of an image while higher layers identify features that can easily be perceived by human, such as a dog, or a number. 
 
 **Feature learning** (supervised, unsupervised, self-supervised) or representation learning referes to the automatic extraction & selection of relevant features to discover useful representations or patterns *directly* from raw input. This replaces the manual feature engineering/designing process and allows automatic learning and using the features for specific tasks. 
+
+### Interview questions:
+
+**Question: How does DL differ from traditional ML?**
+
+*Answer: Unlike traditional ML, deep learning involves the use of deep neural networks with multiple layers (deep architectures) to automatically learn hierarchical representations of data. This allows deep learning models to discover intricate patterns and features of data, making them highly effective for tasks such as image or speech recognition.*
+
+**Question: Explain the concept of NN layres and their role in DL**
+
+*Answer: NN layers are the building blocks of DL models. They are responsible for processing and transforming input data. In a typical feedforward NN, there are 3 main types of layers: input, hidden and output. The input layer receives the raw data, hidden layers process this data through weighted connections and activation functions, and the output layer produces the final result. DL involves the use of multiple hidden layers, allowing the network to learn complex representations through hiearchical abstraction of features.*
+
+**Question: How does training a DL model work? What is the role of loss functions?**
+
+*Answer: Training a DL model involves presenting it with labeled training data, feeding it rhough the network, and adjusting the model's parameters (weights and biases) to minimize a predefined loss function. The loss function quantifies the difference between the predicted output and the actual target values. During training, an optimization algorithm is used to iteratively update the model parameteres in the direction that reduces the loss. This continues until the model achieves satisfactory performace on the training data.*
+
+**Question: Some common challenges and limitations associated with DL?**
+
+*Answer: One of the biggest challenges is overfitting, where the model performs well on training data but poorly on new data. Other challenges include the need for a large labeled datasets, computational intensity, and interpretability as DL models are often considered black boxes. Additionally, transferability of learned knowledge across domains and the ethical considerations of biased models are ongoing concerns.*
+
+*Some consideration to mitigate these challenges: For overfitting, [regularization techniques](https://normsie.github.io/blog/2024/Regularization/) or using more intensive, diverse datasets for training and validation can contribute to a more generalized model. Techniques like model paralelism and distributed training across multiple devices can hlep manage computational requirements more efficiently. Pruning and quantization can reduce the size of the model (-> lighter computation) without sacrificing too much performance. Leverage pre-trained models through transfer learning or data augmentation can help artificially increase training data size. Moreover, augmenting trainnig dataset with adversatial examples and robust optimization techniques can enhance the model's resilience aggainst adversarial attacks.*
 
 ---
 

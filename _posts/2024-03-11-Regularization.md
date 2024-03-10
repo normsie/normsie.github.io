@@ -1,0 +1,99 @@
+---
+layout: distill
+title: Regularization
+description: A series of notes for revision purpose
+tags: deeplearning interview
+#giscus_comments: true
+date: 2024-03-11 11:46:00
+thumbnail: assets/img/deepNN.jpeg
+
+
+authors:
+  - name: Albert Einstein
+    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+    affiliations:
+      name: IAS, Princeton
+  - name: Boris Podolsky
+    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
+    affiliations:
+      name: IAS, Princeton
+  - name: Nathan Rosen
+    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
+    affiliations:
+      name: IAS, Princeton
+
+bibliography: 2018-12-22-distill.bib
+
+# Optionally, you can add a table of contents to your post.
+# NOTES:
+#   - make sure that TOC names match the actual section names
+#     for hyperlinks within the post to work correctly.
+#   - we may want to automate TOC generation in the future using
+#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
+toc:
+  - name: Regularization
+    # if a section has subsections, you can add them as follows:
+    # subsections:
+    #   - name: Example Child Subsection 1
+    #   - name: Example Child Subsection 2
+  - name: Convolutional Layer
+  - name: Convolutional Networks
+    subsections:
+      - name: Components 
+      - name: Popular variations 
+
+
+
+# Below is an example of injecting additional post-specific styles.
+# If you use this post as a template, delete this _styles block.
+_styles: >
+  .fake-img {
+    background: #bbb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+  }
+  .fake-img p {
+    font-family: monospace;
+    color: white;
+    text-align: left;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+---
+
+This is the first in a series of blog notes dedicating to summarizing the most fundamental concepts in Machine Learning, Deep Learning, AI, and other scientific topics of my interest. Struggling to comprehend, distinguish, and reminisce these  concepts myself sometimes, especially before and during important interviews, I would treasure a lot a source of simple, concise, accurate information to revise for those occasions. With that in mind, I created this blog series including fundamental AI/ML concepts and relating interview questions for those preparing to launch their career in the field, or for those who simply need a refresh before moving on to more complicated concepts. If you fancy to dig deeper into these topics, you can refer to my [colleague's blog](https://ottovintola.github.io/blog/) for a more comprehensive and thorough series. 
+
+In this first blog, we will go through the concept of Deep Learning, Linear Classifier, Multi-Layer Perception (MLP) and Backpropagation 
+
+
+## Regularization
+
+to be filled 
+
+---
+
+## Convolutional Layer
+
+to be filled
+
+---
+
+## Convolutional Network
+
+something
+
+### Components 
+
+filter/kernel (the small matrix) is applied to input -> feature map
+1 layers have many filters -> many feature maps -> organized along channel dim (depth of the layer)
+1 feature map corresponds to 1 channel to represent response of the filter to different areas of the input, capturing different aspects of the data. 
+(but) 1 channel after the first CNN's layer is a feature map, before the first layer they're RBG channels
+
+
+
+### Popular variations
+
+---
+
