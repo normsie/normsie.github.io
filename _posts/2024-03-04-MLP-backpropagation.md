@@ -104,6 +104,7 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 2. What is the role of the activation function in the backpropagation algorithm? Examples of commonly used activation functions and explain when to use them?
 
   *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*
+  
     *- Rectified Linear Unit (ReLU) for hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem*
 
     *- Sigmoid for inary classification output*
