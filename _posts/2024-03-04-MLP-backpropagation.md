@@ -101,12 +101,10 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
   **Question: What is the role of the activation function in the backpropagation algorithm? Examples of commonly used activation functions and explain when to use them?**
 
-  *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*
-  <i>  
+  *Answer: Activation function introduces non-linearity into the NN, allowing it to learn complex patterns. Common activation functions include:*  
   + Rectified Linear Unit (ReLU) for hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem  
   + Sigmoid for inary classification output  
   + Softmax for multi-class classification output to provide probability distribution over the classes  
-  </i>
 
   **Question: How does the vanishing gradient problem affect the training of deep neural networks, and what strategies can be employed to mitigate this issue in the context of backpropagation?**
 
@@ -118,6 +116,6 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
   *Answer: Learning rate determines the step size during weight updates - too high rate might lead to overshooting while too low rate leads to slow convergence. Batch size affects the efficiency of weight updates - larger batches provide smoother convergence. The number of epochs influences the duration of training. Setting these hyperparameters involves trade-offs between dataset size, computational resources, and the need for regularization.*
 
-  **Question: Explain the concept of weight initialization in the context of backpropagation.** 
+  **Question:Explain the concept of weight initialization in the context of backpropagation.**
 
   *Answer: Weight initialization is crucial as it influences the starting point of the optimization process. Poor initialization can lead to slow convergence or getting stuck in local minima. Common techniques include He initialization for ReLU and Xavier/Glorot initialization for Sigmoid or Tanh. These methods set the initial weights that balance the variance of inputs and outputs in each layer, promoting a stable and effective training process*
