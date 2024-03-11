@@ -31,16 +31,25 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Regularization
+  - name: Limit model capacity 
+    subsections:
+      - name: Reduce network size
+      - name: Weight decay
+      - name: Parameter sharing
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Convolutional Layer
-  - name: Convolutional Networks
+  - name: Early stopping
+  - name: Emsemble methods
     subsections:
-      - name: Components 
-      - name: Popular variations 
+      - name: Dropout 
+      - name: Probabilistic treatment 
+  - name: Data augmentation
+    subsections:
+      - name: Noise injection
+      - name: Transformations
+      - name: Adversarial training
 
 
 
@@ -63,37 +72,63 @@ _styles: >
   }
 ---
 
-This is the first in a series of blog notes dedicating to summarizing the most fundamental concepts in Machine Learning, Deep Learning, AI, and other scientific topics of my interest. Struggling to comprehend, distinguish, and reminisce these  concepts myself sometimes, especially before and during important interviews, I would treasure a lot a source of simple, concise, accurate information to revise for those occasions. With that in mind, I created this blog series including fundamental AI/ML concepts and relating interview questions for those preparing to launch their career in the field, or for those who simply need a refresh before moving on to more complicated concepts. If you fancy to dig deeper into these topics, you can refer to my [colleague's blog](https://ottovintola.github.io/blog/) for a more comprehensive and thorough series. 
+Overfitting is a common challenge in DL, where a model performs well on training data but fails to generalize to new, unseen data. An overfitted model is one that contains more params than can be justified by the data. Overfitting can be detected using a reserved validation set. If the validation error is much larger than that on the training set, the model might exhibit overfitting. 
 
-In this first blog, we will go through the concept of Deep Learning, Linear Classifier, Multi-Layer Perception (MLP) and Backpropagation 
+Regularization is any modification to the learning algorithm to mitigate the overfitting problem. In the following, we explore some common regularization techniques, including limiting model capacity, early stopping, ensemble methods, and data augmentation. 
 
 
-## Regularization
+## Limiting model capacity
 
-to be filled 
+This refers to constraining the complexity of a model, which aims to prevent the model from being overlly complex and capturing noise or irrelevant patterns in the training data, which can lead to overfitting. 
+
+### Reduce network size
+
+Use a simpler model architecture with fewer layers, neurons, or parameters. Reducing the model size can make it less prone to memorizing the training data and more likely to capture essential patterns. 
+
+### Weight decay
+
+Or L2-regularization, is a technique used to prevent overfitting by penalizing large weights in the model. It's a regularization term (a function of weight) added to the loss function during training, and it encourages the model to use smaller weights, effectively limiting the capacity of the model. The added regularization makes the learning algorithm to perceive the input as having higher variance and thus shrinks the weights. This regularization effect is larger for weight values determined by the minor components of the data. 
+
+### Parameter sharing
+
+Certain parameters (weights and biases) are used across multiple parts of a model. The idea is to share learned knowledge among these parts, allowing the model to capture patterns efficiently and generalize better. 
 
 ---
 
-## Convolutional Layer
+## Early stopping
 
 to be filled
 
 ---
 
-## Convolutional Network
+## Ensemble methods
 
 something
 
-### Components 
+### Dropout
 
-filter/kernel (the small matrix) is applied to input -> feature map
-1 layers have many filters -> many feature maps -> organized along channel dim (depth of the layer)
-1 feature map corresponds to 1 channel to represent response of the filter to different areas of the input, capturing different aspects of the data. 
-(but) 1 channel after the first CNN's layer is a feature map, before the first layer they're RBG channels
+something
 
 
+### Probabilistic treatment
 
-### Popular variations
+---
+
+## Data augmentation
+
+something
+
+### Noise injection
+
+something 
+
+### Transformations
+
+someting
+
+### Adversarial training
+
+somehting
 
 ---
 
