@@ -35,8 +35,6 @@ toc:
     subsections:
       - name: Interview questions
   - name: Linear Classifier
-    subsections:
-      - name: Interview questions
   - name: Multi-Layer Perceptron
     subsections:
       - name: Interview questions
@@ -98,13 +96,51 @@ In this first blog, we will go through the concept of Deep Learning, Linear Clas
 
 ## Linear Classifier
 
-**Linear Classifier** is the simplest ML models and thus it can be considered as elementary components for DL models, which is used for binary or multiclass classification tasks. It makes prediction by combining the input features with weights, and the decision boundary is a linear combination of these features. Therefore, its effectiveness depends on the linearity of the underlying patterns. 
+**Linear Classifier** is the simplest ML models and thus it can be considered as elementary components for DL models, which is used for binary or multiclass classification tasks. It makes prediction by combining the input features with weights, and the decision boundary is a linear combination of these features. Therefore, its effectiveness depends on the linearity of the underlying patterns.
 
 ---
 
 ## Multi-Layer Perceptron
 
 **MLP** is a supplement of feedforward neural network that consists of 3 types of layers: 1 input, 1 or several hidden (because the outputs of this layer are not visible outside the model ), and 1 output layer. Each node in a layer is connected to every node in the next, thus these layers are called *fully-connected*. MLP can be applied to various tasks, from classification, regression, and pattern recognition
+
+### Interview questions
+
+  **Question: How do you choose the number layers and neurons in an MLP?**
+
+  *Answer: For input layer, the number of neurons is the same as the number of features in the data. In the rare cases, there will be one input layer for bias.*
+
+  *For output, if the model is a regressor, the output layer will have only a single neuron. However, in the case of a classifier, the output layer will have either a single neuron or multiple neurons, depending on the class label of the model*
+
+  *Hidden layer is trickier. Most of the problems can be solved by using a single hidden layer with the number of neurons equal to the mean of input and output layer. If fewer neurons are chosen, it will lead to underfitting and high statistical bias. On the other hand, too many neurons might lead to overfittitng, high variance, and increases training time. The number of neurons in each layer depends on the complexity of the problem and the amount of available data, outliers or the activation function. Techniques like model selection, grid search, Bayesian optimization, pruning, or cross-validation can help in finding the optimal architecture for a given task. Some rules of thumb can be used when applicable:*
+
+  - *Start with a hidden layer and gradually increase the complexity if needed*
+
+  - *The number of hidden neurons should be between the size of the input layer and the output layer*
+
+  - *The number of hidden neurons should be 2/3 the size of the input + the size of the output layer*
+
+  - *The number of hidden neurons should be less than twice the size of the input layer*
+
+  **Question: What are some common challenges encountered when training MLPs?**
+
+  *Answer:*
+
+  - *Vanishing gradients occur when gradients become very small, leading to slow learning or convergence to suboptimal solutions*
+
+  - *Exploding gradients occur when gradients become excessively large, causing instability during training. Both problems regarding gradients can be addressed using techniques such as gradient clipping, batch normalization, using appropriate activation function or careful weight initialization.*
+
+  - *Overfitting can be mitigated through regulation techniques* 
+
+  - *Selecting appropriate hyperparameters like learning rate, batch size, and network architecture is also a common problem*
+
+  **Question: What are the advantages of using MLPs over traditional linear classifiers for complex tasks?**
+
+  *Answer: MLPs are capable of leanring highly nonlinear decision boundaries, allowing them to capture complex relationships in the data. This makes them well-suited for for tasks involving image recognition, NLP, and other domains with intricate patterns. Additionally, MLPs can automatically learn hiearchical representations of the input data through their multiple layers, leading to a better feature learning and abstraction. With the advancements in hardware and optimization algorithms, training deep MLPs has become more feasible, enabling the modeling of increasingly complex data distribution*
+
+  **Question: How do you handle categorical variables or non-numeric data when using MLPs for classification tasks?**
+
+  *Answer:Categorical and non-numeric data can be encoded into a numeric format suitable for input into MLPs using, for example, one-hot encoding, where each category is represetnted as a binary vector with a 1s in the positions corresponding to the category and 0s elsewhere. Alternatively, categorical variables can be embedded into a continous vector space using techniques like word embedding or entity embeddings, allowing the network to learn meaningful representations directly from the data. It's also important to preprocess categorical variables carefully so that they are appropriatelly represented and do not introduce biases or artifacts into the model.*
 
 ---
 
